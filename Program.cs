@@ -2,6 +2,7 @@
 { 
     public class Card
     {
+        // get; allows me to assign values to Rank and Suit when Card() is called
         public string Rank {get;}
         public string Suit {get;}
 
@@ -11,6 +12,7 @@
             Suit = suit;
         }
 
+        // Prints Card in a specific format
         public override string ToString() 
         {
             return $"{Rank}{Suit}";
@@ -19,9 +21,10 @@
 
     public class Deck
     {
+        // Standard set of Ranks and Suits in a 52-Deck Of Playing Cards
         protected readonly string[] Ranks = {"A", "2", "3", "4", "5", "6", "7", "8",
                                              "9", "10", "J", "Q", "K"};
-        protected readonly string[] Suits = { "♠", "♦", "♣", "♥" };
+        protected readonly string[] Suits = {"♠", "♦", "♣", "♥"};
         protected List<Card> DeckOfCards;
         
         public Deck()
